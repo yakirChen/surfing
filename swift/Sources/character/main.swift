@@ -31,6 +31,6 @@ let emoji = "🐷"
 print("\(emoji) has \(emoji.count) charactors")
 
 // Unicode 代码单元
-let emojiCodeUnit = emoji.utf8;
-let emojiUncodeScalars = emoji.unicodeScalars;
+let emojiCodeUnit = emoji.utf8
+let emojiUncodeScalars = emoji.unicodeScalars
 print("\(emoji) Unicode代码单元\(emojiCodeUnit) Unicode标量\(emojiUncodeScalars)")

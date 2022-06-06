@@ -1,7 +1,7 @@
 echo "############################################"
 echo "# swift run hello                          #"
 echo "#           basic                          #"
-echo "#           char                           #"
+echo "#           character                      #"
 echo "#           collection                     #"
 echo "############################################"
 

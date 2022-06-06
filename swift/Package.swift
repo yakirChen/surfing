@@ -19,7 +19,7 @@ let package = Package(
             name: "basic"
             ),
         .executableTarget(
-            name: "char"
+            name: "character"
             ),
         .executableTarget(
             name: "collection"
