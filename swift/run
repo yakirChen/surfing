@@ -1,3 +1,13 @@
-swift build
-swift run hello
-swift run basic
+echo "############################################"
+echo "# swift run hello                          #"
+echo "#           basic                          #"
+echo "#           char                           #"
+echo "#           collection                     #"
+echo "############################################"
+
+read -p "swift run " name
+
+if [[ -n "$name" ]]; then
+	echo "Run ${name}"
+	swift run $name
+fi

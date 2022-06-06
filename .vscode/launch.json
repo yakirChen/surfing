@@ -53,6 +53,42 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release basic (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug char (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/char",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug char (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release char (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/char",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release char (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug collection (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/collection",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug collection (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release collection (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/collection",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release collection (swift)"
         }
     ]
 }

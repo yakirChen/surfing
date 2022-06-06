@@ -1,4 +1,5 @@
 let swift = "Swift"
+// 字符串插值
 let greeting = "Hello \(swift) 🤓 !"
 print(greeting)
 
@@ -9,8 +10,8 @@ print(" 1 + 2 = \(one + two)")
 /*
  类型别名
  */
-typealias string = String
-let str: string = "你好🙂 !"
+typealias Str = String
+let str: Str = "你好🙂 !"
 print("\(str)")
 
 /*
@@ -30,6 +31,6 @@ print(nilCoalescing)
 */
 let intArray = [0, 1, 2]
 let arrayCount = intArray.count
-for i in 0...arrayCount {
-    print("\(i) * 5 = \(i *  5) ")
+for index in 0...arrayCount {
+    print("\(index) * 5 = \(index *  5) ")
 }
