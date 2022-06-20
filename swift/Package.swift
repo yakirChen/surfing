@@ -23,6 +23,9 @@ let package = Package(
             ),
         .executableTarget(
             name: "collection"
+            ),
+        .executableTarget(
+            name: "controlFlow"
             )
         // .testTarget(
         //     name: "swiftTests",

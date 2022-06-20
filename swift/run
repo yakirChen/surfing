@@ -3,9 +3,14 @@ echo "# swift run hello                          #"
 echo "#           basic                          #"
 echo "#           character                      #"
 echo "#           collection                     #"
+echo "#           controlFlow                    #"
 echo "############################################"
 
-read -p "swift run " name
+if [[ ! -n $1 ]]; then 
+	read -p "swift run " name
+else
+	name=$1
+fi
 
 if [[ -n "$name" ]]; then
 	echo "Run ${name}"

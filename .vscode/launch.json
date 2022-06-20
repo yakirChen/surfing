@@ -71,6 +71,24 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release basic (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug controlFlow (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/controlFlow",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug controlFlow (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release controlFlow (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/controlFlow",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release controlFlow (swift)"
         }
     ]
 }
