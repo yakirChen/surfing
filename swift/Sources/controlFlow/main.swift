@@ -105,3 +105,27 @@ func fallThrough() {
     }
 }
 fallThrough()
+
+// MARK: Label 标签
+
+// continue label
+// break label
+
+// MARK: guarød 提前退出
+func lowerCase(str: String) {
+let map: [String: String] =  ["A": "a", "B": "b"]
+    guard let lowerCase = map[str] else {
+        return
+    }
+    print("\(str) lower case \(lowerCase)")
+}
+
+lowerCase(str: "A")
+lowerCase(str: "C")
+
+// MARK: 检测API可用性
+if #available(macOS 12, iOS 15, *) {
+    print("API可用")
+} else {
+    print("API不可用")
+}
