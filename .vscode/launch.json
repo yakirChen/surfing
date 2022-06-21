@@ -107,6 +107,24 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release functions (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug closures (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/closures",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug closures (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release closures (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/closures",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release closures (swift)"
         }
     ]
 }
