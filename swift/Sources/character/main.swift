@@ -1,14 +1,14 @@
 let desc = """
-    中国
+      中国
 
-    浙江
-"""
+      浙江
+  """
 
 print(desc)
 
 let empty = String()
 if empty.isEmpty {
-    print("String is empty ")
+  print("String is empty ")
 }
 
 // 字符串截取
@@ -23,7 +23,7 @@ let eAcuteQuestion = "Voulez-vous un caf\\u{E9}?"
 // "Voulez-vous un café?" 使用 LATIN SMALL LETTER E and COMBINING ACUTE ACCENT
 let combinedEAcuteQuestion = "Voulez-vous un caf\\u{65}\\u{301}?"
 if eAcuteQuestion == combinedEAcuteQuestion {
-    print("These two strings are considered equal")
+  print("These two strings are considered equal")
 }
 
 // 字符串数量

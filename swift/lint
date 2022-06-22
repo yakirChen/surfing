@@ -1,1 +1,3 @@
-swiftlint --fix
+#!/usr/bin/env zsh
+
+swiftlint --fix --format

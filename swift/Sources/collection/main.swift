@@ -1,6 +1,6 @@
 // 变量集合元素可变，常量集合元素不可变
 
-/// ####################### 数组(Array) ####################### 
+/// ####################### 数组(Array) #######################
 // 空数组
 var emptyArray: [String] = []
 
@@ -19,15 +19,15 @@ appendArray.insert("B", at: 1)
 appendArray.remove(at: appendArray.count - 1)
 
 for item in appendArray {
-    print("\(item) ", terminator: "")
+  print("\(item) ", terminator: "")
 }
 print()
 for (index, value) in appendArray.enumerated() {
-    print("Item \(index): \(value) ", terminator: "")
+  print("Item \(index): \(value) ", terminator: "")
 }
 print()
 
-/// ####################### 集合(Set) ####################### 
+/// ####################### 集合(Set) #######################
 
 // 空集合
 var letters = Set<Character>()
@@ -43,11 +43,11 @@ set.insert("D")
 set.remove("D")
 
 for item in set {
-    print("\(item) ", terminator: "")
+  print("\(item) ", terminator: "")
 }
 print()
 for (index, value) in set.enumerated() {
-    print("Item \(index): \(value) ", terminator: "")
+  print("Item \(index): \(value) ", terminator: "")
 }
 print()
 
@@ -67,7 +67,7 @@ print(symmetricDifference)
 let subtract: Set<String> = a.subtracting(b)
 print(subtract)
 
-/// ####################### 字典(Dictionary) ####################### 
+/// ####################### 字典(Dictionary) #######################
 
 // 空字典
 var emptyDictionary: [String: String] = [:]
@@ -75,10 +75,10 @@ var emptyDictionary: [String: String] = [:]
 // RBG字典
 let rgb: [String: String] = ["RED": "red", "GREEN": "green", "BLUE": "blue"]
 for (key, value) in rgb.enumerated() {
-    print("Dictionary: \(key) \(value.value)")
+  print("Dictionary: \(key) \(value.value)")
 }
 for key in rgb.keys {
-    print("Dictionary: \(key) \(rgb[key] ?? "")")
+  print("Dictionary: \(key) \(rgb[key] ?? "")")
 }
 
 // 字典的key

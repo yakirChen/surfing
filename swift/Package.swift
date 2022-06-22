@@ -1,24 +1,30 @@
 // swift-tools-version: 5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
+// 参考链接 https://github.com/apple/swift-format/blob/main/Package.swift
 
 import PackageDescription
 
 let package = Package(
-    name: "swift",
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .executableTarget(name: "hello"),
-        .executableTarget(name: "basic"),
-        .executableTarget(name: "character"),
-        .executableTarget(name: "collection"),
-        .executableTarget(name: "controlFlow"),
-        .executableTarget(name: "functions"),
-        .executableTarget(name: "closures")
-        // .testTarget(name: "swiftTests", dependencies: ["swift"]),
-    ]
+  name: "swift",
+  platforms: [
+    .macOS("12")
+  ],
+  dependencies: [
+    // Dependencies declare other packages that this package depends on.
+    // .package(url: /* package url */, from: "1.0.0"),
+  ],
+  targets: [
+    // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+    // Targets can depend on other targets in this package, and on products in packages this package depends on.
+    .executableTarget(name: "hello"),
+    .executableTarget(name: "basic"),
+    .executableTarget(name: "character"),
+    .executableTarget(name: "collection"),
+    .executableTarget(name: "controlFlow"),
+    .executableTarget(name: "functions"),
+    .executableTarget(name: "closures"),
+    .executableTarget(name: "enumerations"),
+    .executableTarget(name: "classes"),
+    // .testTarget(name: "swiftTests", dependencies: ["swift"]),
+  ]
 )

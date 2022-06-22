@@ -125,6 +125,42 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release closures (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug enumerations (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/enumerations",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug enumerations (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release enumerations (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/enumerations",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release enumerations (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug classes (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/classes",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug classes (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release classes (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/classes",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release classes (swift)"
         }
     ]
 }

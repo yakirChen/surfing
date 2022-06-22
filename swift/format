@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# https://github.com/apple/swift-format
+
+swift-format format --in-place --recursive --color-diagnostics .
+swift-format lint --recursive --color-diagnostics .

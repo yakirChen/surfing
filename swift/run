@@ -1,10 +1,15 @@
-echo "############################################"
-echo "# swift run hello                          #"
-echo "#           basic                          #"
-echo "#           character                      #"
-echo "#           collection                     #"
-echo "#           controlFlow                    #"
-echo "############################################"
+#!/usr/bin/env zsh
+
+echo "--------------------------------------------"
+echo "| swift run hello                          |"
+echo "|           basic                          |"
+echo "|           character                      |"
+echo "|           collection                     |"
+echo "|           controlFlow                    |"
+echo "|           closures                       |"
+echo "|           enumeration                    |"
+echo "|           classes                        |"
+echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 
 	read -p "swift run " name
