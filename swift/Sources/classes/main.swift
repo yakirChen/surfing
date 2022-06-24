@@ -24,6 +24,18 @@ struct Square {
     let centerY: Double = Double(self.height) / 2
     return Point(x: centerX, y: centerY)
   }
+
+  // MARK: 属性观察器
+  var propertyObservers: Int = 0 {
+    willSet(newValue) {
+      print("属性值设置为 \(newValue)")
+    }
+    didSet {
+      if propertyObservers != oldValue {
+        print("属性值相差 \(oldValue - propertyObservers)")
+      }
+    }
+  }
 }
 
 class Person {
@@ -76,3 +88,40 @@ let person2 = Person(name: "🌝")
 if person0 !== person2 {
   print("person0 person2 没有引用同一个类实例")
 }
+
+// MARK: 属性观察器
+// Property Observers
+/**
+    可以添加观察器的属性
+    1. 自定义的存储属性
+    2. 继承的存储属性
+    3. 继承的计算属性
+
+    可为属性添加其中一个或者两个观察器
+    1. willSet 在新的值被设置之前调用
+    2. didSet 在新的值被设置之后调用
+ */
+square0.propertyObservers = 0
+square0.propertyObservers = 1
+
+// MARK: 属性包装器
+@propertyWrapper
+struct OneGt {
+  private var number: Int
+  var wrappedValue: Int {
+    get { return number }
+    set { number = max(newValue, 1) }
+  }
+
+  init() {
+    self.number = 3
+  }
+}
+
+struct One {
+  @OneGt var number: Int
+}
+var one = One()
+print("\(one.number)")
+one.number = -1
+print("\(one.number)")

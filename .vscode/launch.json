@@ -161,6 +161,42 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release classes (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug subscript (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/subscript",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug subscript (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release subscript (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/subscript",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release subscript (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug inheritance (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/inheritance",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug inheritance (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release inheritance (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/inheritance",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release inheritance (swift)"
         }
     ]
 }

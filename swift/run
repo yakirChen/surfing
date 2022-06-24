@@ -9,6 +9,8 @@ echo "|           controlFlow                    |"
 echo "|           closures                       |"
 echo "|           enumeration                    |"
 echo "|           classes                        |"
+echo "|           subscript                      |"
+echo "|           inheritan                      |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 

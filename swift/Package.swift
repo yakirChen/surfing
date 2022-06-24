@@ -25,6 +25,8 @@ let package = Package(
     .executableTarget(name: "closures"),
     .executableTarget(name: "enumerations"),
     .executableTarget(name: "classes"),
+    .executableTarget(name: "subscript"),
+    .executableTarget(name: "inheritance"),
     // .testTarget(name: "swiftTests", dependencies: ["swift"]),
   ]
 )
