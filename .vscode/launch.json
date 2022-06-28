@@ -233,6 +233,24 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release errorHandle (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug typeCasting (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/typeCasting",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug typeCasting (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release typeCasting (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/typeCasting",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release typeCasting (swift)"
         }
     ]
 }

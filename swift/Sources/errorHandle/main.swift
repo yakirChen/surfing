@@ -47,7 +47,6 @@ print("someValue \(someValue ?? -1)")
 // MARK: 禁用错误传递
 // let photo = try! loadImage(atPath: "./Resources/a.jpg")
 
-
 // MARK: 指定清理操作
 // func processFile(filename: String) throws {
 //     if exists(filename) {

@@ -13,6 +13,7 @@ echo "|           subscript                      |"
 echo "|           inheritan                      |"
 echo "|           optionals                      |"
 echo "|           errorHandle                    |"
+echo "|           typeCasting                    |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 
