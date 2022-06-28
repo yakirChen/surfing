@@ -197,6 +197,42 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release inheritance (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug optionals (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/optionals",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug optionals (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release optionals (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/optionals",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release optionals (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug errorHandle (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/errorHandle",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug errorHandle (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release errorHandle (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/errorHandle",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release errorHandle (swift)"
         }
     ]
 }

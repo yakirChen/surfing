@@ -120,14 +120,14 @@ class SomeClass {
 
 // MARK: 析构
 class Bank {
-  static var coinsInBank = 10_000
+  static var coins = 10_000
   static func distribute(coins numberOfCoinsRequested: Int) -> Int {
-    let numberOfCoinsToVend = min(numberOfCoinsRequested, coinsInBank)
-    coinsInBank -= numberOfCoinsToVend
+    let numberOfCoinsToVend = min(numberOfCoinsRequested, coins)
+    coins -= numberOfCoinsToVend
     return numberOfCoinsToVend
   }
-  static func receive(coins: Int) {
-    coinsInBank += coins
+  static func receive(coin: Int) {
+    coins += coin
   }
 }
 class Player {
@@ -139,11 +139,11 @@ class Player {
     coinsInPurse += Bank.distribute(coins: coins)
   }
   deinit {
-    Bank.receive(coins: coinsInPurse)
+    Bank.receive(coin: coinsInPurse)
   }
 }
 var playerOne: Player? = Player(coins: 100)
 print("使用 \(playerOne!.coinsInPurse)")
-print("剩余 \(Bank.coinsInBank)")
+print("剩余 \(Bank.coins)")
 playerOne = nil
-print("析构后 \(Bank.coinsInBank)")
+print("析构后 \(Bank.coins)")

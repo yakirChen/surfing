@@ -11,6 +11,8 @@ echo "|           enumeration                    |"
 echo "|           classes                        |"
 echo "|           subscript                      |"
 echo "|           inheritan                      |"
+echo "|           optionals                      |"
+echo "|           errorHandle                    |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 
