@@ -14,6 +14,7 @@ echo "|           inheritan                      |"
 echo "|           optionals                      |"
 echo "|           errorHandle                    |"
 echo "|           typeCasting                    |"
+echo "|           nestedType                     |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 

@@ -251,6 +251,24 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release typeCasting (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug nestedType (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/nestedType",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug nestedType (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release nestedType (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/nestedType",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release nestedType (swift)"
         }
     ]
 }

@@ -30,6 +30,7 @@ let package = Package(
     .executableTarget(name: "optionals"),
     .executableTarget(name: "errorHandle"),
     .executableTarget(name: "typeCasting"),
+    .executableTarget(name: "nestedType"),
     // .testTarget(name: "swiftTests", dependencies: ["swift"]),
   ]
 )
