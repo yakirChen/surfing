@@ -15,6 +15,7 @@ echo "|           optionals                      |"
 echo "|           errorHandle                    |"
 echo "|           typeCasting                    |"
 echo "|           nestedType                     |"
+echo "|           protocols                     |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 

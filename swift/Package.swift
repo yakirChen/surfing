@@ -31,6 +31,7 @@ let package = Package(
     .executableTarget(name: "errorHandle"),
     .executableTarget(name: "typeCasting"),
     .executableTarget(name: "nestedType"),
+    .executableTarget(name: "protocols"),
     // .testTarget(name: "swiftTests", dependencies: ["swift"]),
   ]
 )
