@@ -1,12 +1,5 @@
 /// Function
 
-extension String {
-  func substring(separator: String) -> [String] {
-    let splited = self.split(separator: " ")
-    return splited.compactMap { "\($0)" }
-  }
-}
-
 // MARK: 多返回值
 func multiResult(origin: String) -> (first: String, second: String) {
   let array = origin.substring(separator: " ")

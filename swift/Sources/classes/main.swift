@@ -92,14 +92,14 @@ if person0 !== person2 {
 // MARK: 属性观察器
 // Property Observers
 /**
-    可以添加观察器的属性
-    1. 自定义的存储属性
-    2. 继承的存储属性
-    3. 继承的计算属性
+ 可以添加观察器的属性
+ 1. 自定义的存储属性
+ 2. 继承的存储属性
+ 3. 继承的计算属性
 
-    可为属性添加其中一个或者两个观察器
-    1. willSet 在新的值被设置之前调用
-    2. didSet 在新的值被设置之后调用
+ 可为属性添加其中一个或者两个观察器
+ 1. willSet 在新的值被设置之前调用
+ 2. didSet 在新的值被设置之后调用
  */
 square0.propertyObservers = 0
 square0.propertyObservers = 1
