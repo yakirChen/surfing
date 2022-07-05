@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
 
 // extern 说明符
 extern void counter(void);
@@ -23,8 +24,9 @@ void sys_exit();
 int sum(int i, ...);
 
 void array();
+int arr_arg(int[], int len);
 
-int array_arg(int[], int len);
+char *str();
 
 int main(void)
 {
@@ -78,8 +80,11 @@ int main(void)
 
     array();
     int a_arr[] = {0, 1, 2, 3, 4, 5};
-    array_arg(a_arr, 6);
-    array_arg((int[]){0, 1, 2, 3, 4, 5}, 6);
+    arr_arg(a_arr, 6);
+    arr_arg((int[]){0, 1, 2, 3, 4, 5}, 6);
+
+    char *str_ptr = str();
+    str_ptr = NULL;
 
     return 0;
 }
@@ -201,7 +206,7 @@ void array()
     }
 }
 
-int array_arg(int a[], int len)
+int arr_arg(int a[], int len)
 {
     int sum;
     for (int i = 0; i < len; i++)
@@ -209,4 +214,50 @@ int array_arg(int a[], int len)
         sum += *(a + i);
     }
     return sum;
+}
+
+char *str()
+{
+    // 字符串声明
+    char string0[] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    char string1[] = "Hello";
+    char *string2 = "Hello";
+
+    // 字符串长度
+    int str_len = strlen(string1);
+    // 字符串变量长度
+    int str_size = sizeof(string1);
+    printf("字符串 %s 长度 %d 变量长度 %d\n", string1, str_len, str_size);
+
+    // 字符串复制
+    char dest[str_len];
+    strcpy(dest, string1);
+    printf("字符串复制 %s\n", dest);
+
+    // 字符串拼接
+    char hello[100] = "hello ";
+    strncat(hello, "yakir", 100);
+    printf("字符串拼接 %s\n", hello);
+
+    // 字符串数组
+    char weekdays0[][10] = {
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"};
+
+    // 字符串数组指针，相比字符串数组省内存
+    char *weekdays1[] = {
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"};
+
+    return string2;
 }
