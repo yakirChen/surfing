@@ -22,7 +22,9 @@ void sys_exit();
 // 可变参数
 int sum(int i, ...);
 
-int array();
+void array();
+
+int array_arg(int[], int len);
 
 int main(void)
 {
@@ -75,6 +77,9 @@ int main(void)
     printf("和 %d\n", total);
 
     array();
+    int a_arr[] = {0, 1, 2, 3, 4, 5};
+    array_arg(a_arr, 6);
+    array_arg((int[]){0, 1, 2, 3, 4, 5}, 6);
 
     return 0;
 }
@@ -161,9 +166,47 @@ int sum(int i, ...)
     return sum;
 }
 
-int array()
+void array()
 {
     int int_arr[3];
     int sizeof_arr = sizeof(int_arr);
-    printf("数组长度 %d", sizeof_arr);
+    printf("数组长度 %d\n", sizeof_arr);
+
+    // 多维数组
+    int dimension_arr[2][2];
+
+    // 变长数组(运行时确定长度)
+    int a, b;
+    int x = a + b;
+    int var_len_arr[x];
+
+    int len = 3;
+    int a_arr[] = {0, 1, 2};
+
+    // 访问数组元素, 两种访问形式
+    printf("访问数组元素 %d \n", a_arr[1]);
+    printf("访问数组元素 %d \n", *(a_arr + 1));
+
+    // 遍历数组元素
+    // 数组名是指针, 指向数组第一个元素
+    int *a_ptr = a_arr;
+    while (*a_ptr != 2)
+    {
+        printf("访问数组元素0 %d \n", *a_ptr);
+        a_ptr++;
+    }
+    for (int i = 0; i < len; i++)
+    {
+        printf("访问数组元素1 %d\n", *(a_arr + i));
+    }
+}
+
+int array_arg(int a[], int len)
+{
+    int sum;
+    for (int i = 0; i < len; i++)
+    {
+        sum += *(a + i);
+    }
+    return sum;
 }
