@@ -1,6 +1,18 @@
 {
     "configurations": [
         {
+            "name": "Debug Pointer (clang)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder:surfing}/clang/.build/pointer",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder:surfing}/clang/.build/",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        },
+        {
             "type": "lldb",
             "request": "launch",
             "name": "Debug hello (swift)",
@@ -287,6 +299,42 @@
             "args": [],
             "cwd": "${workspaceFolder:surfing}/swift",
             "preLaunchTask": "swift: Build Release protocols (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug generics (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/generics",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug generics (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release generics (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/generics",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release generics (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug concurrency (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/debug/concurrency",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Debug concurrency (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release concurrency (swift)",
+            "program": "${workspaceFolder:surfing}/swift/.build/release/concurrency",
+            "args": [],
+            "cwd": "${workspaceFolder:surfing}/swift",
+            "preLaunchTask": "swift: Build Release concurrency (swift)"
         }
     ]
 }

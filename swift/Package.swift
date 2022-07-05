@@ -9,6 +9,7 @@ let package = Package(
   platforms: [
     .macOS("12")
   ],
+  products: [],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
     // .package(url: /* package url */, from: "1.0.0"),
@@ -32,6 +33,8 @@ let package = Package(
     .executableTarget(name: "typeCasting"),
     .executableTarget(name: "nestedType"),
     .executableTarget(name: "protocols"),
+    .executableTarget(name: "generics"),
+    .executableTarget(name: "concurrency"),
     // .testTarget(name: "swiftTests", dependencies: ["swift"]),
   ]
 )
