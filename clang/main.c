@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 
 // extern 说明符
 extern void counter(void);
@@ -17,6 +18,11 @@ void (*swap_ptr)(int *, int *);
 void compute(void (*swap)(int *, int *));
 
 void sys_exit();
+
+// 可变参数
+int sum(int i, ...);
+
+int array();
 
 int main(void)
 {
@@ -60,6 +66,16 @@ int main(void)
     counter();
     counter();
 
+    // static 不能修饰变量，只能修饰常量
+    // static int var = a;
+    static int s;
+    // 相当于 static int s = 0;
+
+    int total = sum(5, 2, 3, 4, 5, 6);
+    printf("和 %d\n", total);
+
+    array();
+
     return 0;
 }
 
@@ -97,4 +113,57 @@ void sys_exit()
 {
     // EXIT_SUCCESS在stdlib.h中
     exit(EXIT_SUCCESS);
+}
+
+static void Inner()
+{
+    printf("static修饰函数，函数只能在当前文件中使用");
+}
+
+void const_value_ptr(const int *a)
+{
+    // const 指针指向的值在函数内部被不能修改
+    // *a = 0;
+
+    // a本身可以被修改
+    int b = 0;
+    a = &b;
+}
+
+void const_prt(int *const a)
+{
+    // const 限制修改指针, 可以修改指针指向的值
+    *a = 0;
+
+    // 限制修改指针
+    // int b = 0;
+    // a = &b;
+}
+
+void const_both(const int *const a)
+{
+    // 限制修改指针和指针指向的值
+}
+
+// 第一个值可以表示参数个数
+int sum(int i, ...)
+{
+    int sum = 0;
+    va_list args; // 定义可变参数对象
+    va_start(args, i);
+    for (int j = 0; j < i; ++j)
+    {
+        // 获取可变参数对象中的值
+        int val = va_arg(args, int);
+        sum += val;
+    }
+    va_end(args);
+    return sum;
+}
+
+int array()
+{
+    int int_arr[3];
+    int sizeof_arr = sizeof(int_arr);
+    printf("数组长度 %d", sizeof_arr);
 }
