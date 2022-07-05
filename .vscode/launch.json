@@ -1,10 +1,22 @@
 {
     "configurations": [
         {
-            "name": "Debug Pointer (clang)",
+            "name": "Debug Basic (clang)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder:surfing}/clang/.build/pointer",
+            "program": "${workspaceFolder:surfing}/clang/.build/basic",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder:surfing}/clang/.build/",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        },
+        {
+            "name": "Debug Memary (clang)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder:surfing}/clang/.build/memary",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder:surfing}/clang/.build/",

@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+echo "--------------------------------------------"
+echo "| clang run basic                          |"
+echo "|           memory                         |"
+echo "--------------------------------------------"
+
+if [[ ! -n $1 ]]; then 
+	read -p "clang run " name
+else
+	name=$1
+fi
+
+if [[ ! -d .build ]]; then 
+    mkdir .build
+fi
+
+if [[ -n "$name" ]]; then
+	echo "Run ${name}"
+	clang -fdiagnostics-color=always \
+        -g ${name}.c extern.c \
+        -o .build/${name} && \
+    ./.build/${name}
+fi
