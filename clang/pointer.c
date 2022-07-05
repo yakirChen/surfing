@@ -1,14 +1,22 @@
 // c 指针
 
 #include <stdio.h>
+#include <stdlib.h>
+
+// extern 说明符
+extern void counter(void);
 
 void increment0(int a);
 int increment1(int a);
 void increment2(int *a);
 void swap(int *a, int *b);
-void (*swap_ptr)(int *, int *); // 函数指针声明
+// 函数指针声明
+void (*swap_ptr)(int *, int *);
 
+// 函数作为参数
 void compute(void (*swap)(int *, int *));
+
+void sys_exit();
 
 int main(void)
 {
@@ -49,6 +57,9 @@ int main(void)
     swap_ptr(&a, &b);
     printf("值交换 a: %d b: %d\n", a, b);
 
+    counter();
+    counter();
+
     return 0;
 }
 
@@ -81,3 +92,9 @@ void swap(int *a, int *b)
 // 函数名本身就是指向函数代码的指针
 // swap 与 &swap 作用相同
 void (*swap_ptr)(int *, int *) = &swap;
+
+void sys_exit()
+{
+    // EXIT_SUCCESS在stdlib.h中
+    exit(EXIT_SUCCESS);
+}
