@@ -84,7 +84,6 @@ int main(void)
     arr_arg((int[]){0, 1, 2, 3, 4, 5}, 6);
 
     char *str_ptr = str();
-    str_ptr = NULL;
 
     return 0;
 }
