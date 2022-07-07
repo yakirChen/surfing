@@ -25,6 +25,18 @@
             "MIMode": "lldb"
         },
         {
+            "name": "Debug Union (clang)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder:surfing}/clang/.build/union",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder:surfing}/clang/.build/",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        },
+        {
             "type": "lldb",
             "request": "launch",
             "name": "Debug hello (swift)",

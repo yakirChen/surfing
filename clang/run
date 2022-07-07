@@ -4,6 +4,7 @@ echo "--------------------------------------------"
 echo "| clang run basic                          |"
 echo "|           memory                         |"
 echo "|           struct                         |"
+echo "|           union                          |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 
