@@ -1,6 +1,7 @@
 // 结构体
 
 #include <stdio.h>
+#include <stdlib.h>
 
 struct person
 {
@@ -66,6 +67,54 @@ struct node
     struct node *next;
 };
 
+void linked_nodes()
+{
+    struct node *head = malloc(sizeof(struct node));
+    head->data = 11;
+    head->next = malloc(sizeof(struct node));
+
+    head->next->data = 22;
+    head->next->next = malloc(sizeof(struct node));
+
+    head->next->next->data = 33;
+    head->next->next->next = NULL;
+
+    // 遍历这个列表
+    for (struct node *cur = head; cur != NULL; cur = cur->next)
+    {
+        printf("%d\n", cur->data);
+    }
+}
+
+// 位字段 (bit field)
+// 属性后面的:1，表示指定这些属性只占用一个二进制位，所以这个数据结构一共是4个二进制位。
+struct
+{
+    unsigned int ab : 1;
+    unsigned int cd : 1;
+    unsigned int ef : 1;
+    unsigned int gh : 1;
+} synth;
+// 实际存储的时候，C 语言会按照int类型占用的字节数，存储一个位字段结构。
+// 如果有剩余的二进制位，可以使用未命名属性，填满那些位。
+// 也可以使用宽度为0的属性，表示占满当前字节剩余的二进制位，迫使下一个属性存储在下一个字节。
+struct
+{
+    unsigned int field1 : 1;
+    unsigned int : 2;
+    unsigned int field2 : 1;
+    unsigned int : 0;
+    unsigned int field3 : 1;
+} stuff;
+// stuff.field1与stuff.field2之间，有一个宽度为两个二进制位的未命名属性。stuff.field3将存储在下一个字节
+
+// 弹性数组成员
+struct flexible_arr
+{
+    int len;
+    char chars[];
+};
+
 int main(void)
 {
     struct person yakir = {"yakir", 18};
@@ -82,6 +131,12 @@ int main(void)
     };
 
     printf("student age %d name.first %s name.last %s \n", stu.age, stu.name.first, stu.name.last);
+
+    linked_nodes();
+
+    // 在flexible_arr分配内存时确定数量
+    struct flexible_arr *flex_a = malloc(sizeof(struct flexible_arr) + sizeof(char) * 10);
+    (*flex_a).len = 10;
 
     return 0;
 }
