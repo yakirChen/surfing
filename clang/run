@@ -6,6 +6,7 @@ echo "|           memory                         |"
 echo "|           struct                         |"
 echo "|           union                          |"
 echo "|           enum                           |"
+echo "|           preprocessor                   |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 
