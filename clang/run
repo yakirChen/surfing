@@ -5,6 +5,7 @@ echo "| clang run basic                          |"
 echo "|           memory                         |"
 echo "|           struct                         |"
 echo "|           union                          |"
+echo "|           enum                           |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 
