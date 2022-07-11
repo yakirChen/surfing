@@ -91,3 +91,5 @@ iOSInjectionProject/
 target/
 .idea/
 dependency-reduced-pom.xml
+
+clang/test.txt
