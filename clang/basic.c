@@ -1,4 +1,4 @@
-// c 指针
+// c 基础
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -8,6 +8,8 @@ echo "|           union                          |"
 echo "|           enum                           |"
 echo "|           preprocessor                   |"
 echo "|           file                           |"
+echo "|           arg                            |"
+echo "|           string                         |"
 echo "--------------------------------------------"
 
 if [[ ! -n $1 ]]; then 
@@ -26,4 +28,5 @@ if [[ -n "$name" ]]; then
         -g ${name}.c extern.c \
         -o .build/${name} && \
     ./.build/${name}
+    echo $?
 fi
