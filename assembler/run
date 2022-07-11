@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+echo "--------------------------------------------"
+echo "| nasm run hello                          |"
+echo "--------------------------------------------"
+
+if [[ ! -n $1 ]]; then 
+	read -p "nasm run " name
+else
+	name=$1
+fi
+
+if [[ ! -d .build ]]; then 
+    mkdir .build
+fi
+
+if [[ -n "$name" ]]; then
+	echo "Run ${name}"
+    nasm -f macho64 $name.asm -o .build/$name.o && \
+        ld -e start -static .build/$name.o -o .build/$name && \
+        .build/$name
+    echo $?
+fi

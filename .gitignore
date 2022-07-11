@@ -93,3 +93,8 @@ target/
 dependency-reduced-pom.xml
 
 clang/test.txt
+
+# idea
+
+.idea
+*.iml
