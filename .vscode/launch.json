@@ -1,6 +1,14 @@
 {
     "configurations": [
         {
+            "type": "zshdb",
+            "request": "launch",
+            "name": "Zsh-Debug (hardcoded script name)",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/cpp/run",
+            "args": ["hello"]
+        },
+        {
             "name": "Debug Basic (clang)",
             "type": "cppdbg",
             "request": "launch",

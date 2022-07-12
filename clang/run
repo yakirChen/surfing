@@ -1,32 +1,30 @@
 #!/usr/bin/env zsh
 
-echo "--------------------------------------------"
-echo "| clang run basic                          |"
-echo "|           memory                         |"
-echo "|           struct                         |"
-echo "|           union                          |"
-echo "|           enum                           |"
-echo "|           preprocessor                   |"
-echo "|           file                           |"
-echo "|           arg                            |"
-echo "|           string                         |"
-echo "--------------------------------------------"
+PWD=$(cd "$(dirname "$0")";pwd)
+source ${PWD}/../run_common.sh
 
-if [[ ! -n $1 ]]; then 
-	read -p "clang run " name
-else
-	name=$1
-fi
+LANGUAGE="clang"
+EXECUTES=(
+    basic
+    memory
+    struct
+    union
+    enum
+    preprocessor
+    file
+    arg
+    string
+)
 
-if [[ ! -d .build ]]; then 
-    mkdir .build
-fi
+prompt
+read_arg $1
+mk_build
 
 if [[ -n "$name" ]]; then
-	echo "Run ${name}"
-	clang -fdiagnostics-color=always \
+    echo "Run ${name}"
+    clang -fdiagnostics-color=always \
         -g ${name}.c extern.c \
-        -o .build/${name} && \
-    ./.build/${name}
+        -o .build/${name} &&
+        ./.build/${name}
     echo $?
 fi

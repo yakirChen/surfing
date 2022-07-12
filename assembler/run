@@ -1,18 +1,16 @@
 #!/usr/bin/env zsh
 
-echo "--------------------------------------------"
-echo "| nasm run hello                          |"
-echo "--------------------------------------------"
+PWD=$(cd "$(dirname "$0")";pwd)
+source ${PWD}/../run_common.sh
 
-if [[ ! -n $1 ]]; then 
-	read -p "nasm run " name
-else
-	name=$1
-fi
+LANGUAGE="nasm"
+EXECUTES=(
+    hello
+)
 
-if [[ ! -d .build ]]; then 
-    mkdir .build
-fi
+prompt
+read_arg $1
+mk_build
 
 if [[ -n "$name" ]]; then
 	echo "Run ${name}"

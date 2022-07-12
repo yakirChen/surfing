@@ -1,26 +1,30 @@
 #!/usr/bin/env zsh
 
-echo "--------------------------------------------"
-echo "| swift run hello                          |"
-echo "|           basic                          |"
-echo "|           character                      |"
-echo "|           collection                     |"
-echo "|           controlFlow                    |"
-echo "|           closures                       |"
-echo "|           enumeration                    |"
-echo "|           classes                        |"
-echo "|           subscript                      |"
-echo "|           inheritan                      |"
-echo "|           optionals                      |"
-echo "|           errorHandle                    |"
-echo "|           typeCasting                    |"
-echo "|           nestedType                     |"
-echo "|           protocols                      |"
-echo "|           generics                       |"
-echo "|           concurrency                    |"
-echo "--------------------------------------------"
+PWD=$(cd "$(dirname "$0")";pwd)
+source ${PWD}/../run_common.sh
 
-if [[ ! -n $1 ]]; then 
+LANGUAGE="swift"
+EXECUTES=(
+	hello
+	basic
+	character
+	collection
+	controlFlow
+	closures
+	enumeration
+	classes
+	subscript
+	inheritan
+	optionals
+	errorHandle
+	typeCasting
+	nestedType
+	protocols
+	generics
+	concurrency
+)
+
+if [[ ! -n $1 ]]; then
 	read -p "swift run " name
 else
 	name=$1
