@@ -12,10 +12,10 @@ prompt
 read_arg $1
 mk_build
 
-if [[ -n "$name" ]]; then
+if [[ -n "${name}" ]]; then
 	echo "Run ${name}"
-    nasm -f macho64 $name.asm -o .build/$name.o && \
-        ld -e start -static .build/$name.o -o .build/$name && \
-        .build/$name
+    nasm -f macho64 ${name}.asm -o .build/${name}.o && \
+        ld -e start -static .build/${name}.o -o .build/${name} && \
+        .build/${name}
     echo $?
 fi

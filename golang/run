@@ -3,20 +3,16 @@
 PWD=$(cd "$(dirname "$0")";pwd)
 source ${PWD}/../run_common.sh
 
-LANGUAGE="clang++"
+LANGUAGE="go"
 EXECUTES=(
     hello
 )
 
 prompt
 read_arg $1
-mk_build
 
 if [[ -n "${name}" ]]; then
-    echo "Run ${name}"
-    clang++ -fdiagnostics-color=always \
-        -g ${name}.cpp \
-        -o .build/${name} &&
-        ./.build/${name}
+    echo "Run ${name}.go"
+    go run ${name}.go
     echo $?
 fi
