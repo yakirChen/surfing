@@ -4,13 +4,14 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 /**
- * Generic
+ * UniversalGenerics
  *
  * @author yakir on 2022/06/20 15:45.
  */
-public class Generic {
+public class UniversalGenerics<T> {
 
     public static void main(String[] args) {
+
         var map_0 = new HashMap<String, Integer>();
         map_0.put("a", 1);
         System.out.println(map_0.containsKey("a"));
